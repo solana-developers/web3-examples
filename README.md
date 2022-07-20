@@ -1,4 +1,4 @@
-# Program Examples
+# Web3 Examples
 
 ### :space_invader: Welcome, Solana Developer. :space_invader:   
    
@@ -8,7 +8,7 @@ Or maybe you're in a hackathon right now, building an absolutely *epic* dApp.
    
 Take a look at this awesome collection of examples in Typescript using Solana's `web3.js` (and Anchor); for your cloning & running pleasure.   
    
-### :javascript: JavaScript. :typescript: TypeScript. :cyclone: Web3, baby. 
+### :large_blue_diamond: TypeScript. :large_orange_diamond: JavaScript. :cyclone: Web3. 
 
 ## Navigating this Repo
 
