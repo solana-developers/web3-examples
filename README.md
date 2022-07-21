@@ -25,12 +25,12 @@ Take a look at this awesome collection of examples in Typescript using Solana's 
 * ### [ ] Basics
     * [ ] Create an Account
     * [ ] Rent
-    * [ ] Transfer SOL
-    * [ ] Stake SOL with a Validator
     * [ ] Assign Data to an Account
     * [ ] Reallocate an Account's Data
     * [ ] Transfer an Account's Ownership
     * [ ] Destroy an Account
+    * [ ] Transfer SOL
+    * [ ] Stake SOL with a Validator
 * ### [ ] Tokens
     * [ ] Create an SPL Token
     * [ ] Token Metadata
