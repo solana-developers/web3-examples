@@ -29,7 +29,7 @@ Take a look at this awesome collection of examples in Typescript using Solana's 
     * [ ] Reallocate an Account's Data
     * [ ] Transfer an Account's Ownership
     * [ ] Destroy an Account
-    * [ ] Transfer SOL
+    * [x] Transfer SOL
     * [ ] Stake SOL with a Validator
 * ### [ ] Tokens
     * [ ] Create an SPL Token
