@@ -16,7 +16,7 @@ function createKeypairFromFile(path: string): Keypair {
 };
 
 
-describe("transfer-sol", () => {
+describe("transfer SOL from client side", () => {
 
     async function getBalances(payerPubkey: PublicKey, recipientPubkey: PublicKey, timeframe: string) {
         let payerBalance = await connection.getBalance(payerPubkey);
