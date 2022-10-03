@@ -1,10 +1,7 @@
 import {
-    AddressLookupTableProgram,
     Connection,
     Keypair,
-    LAMPORTS_PER_SOL,
     PublicKey,
-    SystemProgram,
     TransactionInstruction,
     VersionedTransaction,
     TransactionMessage,
@@ -76,6 +73,7 @@ export async function printAddressLookupTable(
     lookupTablePubkey: PublicKey,
 ): Promise<void> {
 
+    await delay(2);
     const lookupTableAccount = await connection
         .getAddressLookupTable(lookupTablePubkey)
         .then((res) => res.value);
@@ -101,4 +99,9 @@ export async function printBalances(
     console.log(`   Test Account #2 balance : ${
         await connection.getBalance(pubkeyTwo)
     }`);
+}
+
+
+function delay(s: number) {
+    return new Promise( resolve => setTimeout(resolve, s * 1000) );
 }

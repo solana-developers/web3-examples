@@ -2,7 +2,6 @@ import {
     AddressLookupTableProgram,
     Connection,
     Keypair,
-    LAMPORTS_PER_SOL,
     PublicKey,
     SystemProgram,
     TransactionInstruction,
@@ -73,12 +72,16 @@ describe("Address Lookup Tables!", () => {
         });
 
         await sendTransactionV0(connection, [ix], payer);
+
+        await printBalances(
+            connection, "After", testAccountOne.publicKey, testAccountTwo.publicKey
+        );
     });
 
     it("Send a transaction WITHOUT using the ALT", async () => {
 
         await printBalances(
-            connection, "Before", payer.publicKey, testAccountOne.publicKey
+            connection, "Before", testAccountOne.publicKey, testAccountTwo.publicKey
         );
         
         const ix = SystemProgram.transfer({
