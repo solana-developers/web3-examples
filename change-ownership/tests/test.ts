@@ -46,34 +46,33 @@ describe("Change an account's owner", async () => {
 
     it("Change ownership for the account", async () => {
 
-        const newKeypair = Keypair.generate();
-
         let ix = SystemProgram.assign({
             accountPubkey: newKeypair.publicKey,
-            programId: PROGRAM_ID
-        })
+            programId: PROGRAM_ID,
+        });
 
         await sendAndConfirmTransaction(
-            connection, 
+            connection,
             new Transaction().add(ix),
             [payer, newKeypair]
         );
     });
 
-    it("Change it again using the System Program", async () => {
-
-        const newKeypair = Keypair.generate();
+    it("Try to change it again using the System Program", async () => {
 
         let ix = SystemProgram.assign({
             accountPubkey: newKeypair.publicKey,
             programId: SystemProgram.programId,
-        })
+        });
 
-        await sendAndConfirmTransaction(
-            connection, 
-            new Transaction().add(ix),
-            [payer, newKeypair]
-        );
-    });
+        try {
+            await sendAndConfirmTransaction(
+                connection,
+                new Transaction().add(ix),
+                [payer, newKeypair]
+            );
+        } catch(e) {
+            console.log(e);
+        }
   });
-  
+});

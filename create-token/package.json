@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "test": "yarn run ts-mocha -p ./tests/tsconfig.json -t 1000000 ./tests/test.ts"
+  },
+  "dependencies": {
+    "@solana/spl-token": "^0.3.6",
+    "@solana/web3.js": "1.63.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.3",
+    "@types/mocha": "^9.1.1",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^4.8.3"
+  }
+}
