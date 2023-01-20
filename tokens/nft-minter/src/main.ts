@@ -14,7 +14,7 @@ const tokenMintKeypair = Keypair.generate()
 async function tokensScript() {
     await createAccount("Test User Keypair #1", testUserKeypair1, payer)
     
-    // SPL Token
+    // NFT
     await createNft(
         tokenMintKeypair, 
         payer,
