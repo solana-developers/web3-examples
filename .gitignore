@@ -1,4 +1,5 @@
 test-ledger/
-*/node_modules/
-*/yarn.lock
-*/yarn-error.log
+*/**/test-ledger/
+*/**/node_modules/
+*/**/yarn.lock
+*/**/yarn-error.log
