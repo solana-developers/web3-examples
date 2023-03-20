@@ -79,12 +79,11 @@ import {
       TOKEN_2022_PROGRAM_ID
     )
   );
-  const transaction = await sendAndConfirmTransaction(
+  const signature = await sendAndConfirmTransaction(
     connection,
     mintTransaction,
-    [payer, mintKeypair],
-    undefined
+    [payer, mintKeypair]
   );
-  console.log("Your transaction PublicKey:", transaction);
+  console.log("Your transaction PublicKey:", signature);
   console.log("Your mint PublicKey:", mint.toBase58());
 })();
