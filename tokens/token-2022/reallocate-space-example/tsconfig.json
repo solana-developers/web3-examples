@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "types": ["node"],
+      "typeRoots": ["./node_modules/@types"],
+      "lib": ["es2015"],
+      "module": "CommonJS",
+      "target": "es6",
+      "esModuleInterop": true
+    }
+  }
+  
