@@ -58,6 +58,7 @@ import {
         ),
         createEnableRequiredMemoTransfersInstruction(account, owner.publicKey, [], TOKEN_2022_PROGRAM_ID)
     );
-    const signature = await sendAndConfirmTransaction(connection, transaction, [payer, owner], undefined);
-    console.log(`signature Key:`, signature)
+   const signature = await sendAndConfirmTransaction(connection, transaction, [payer, owner], undefined);
+   console.log("transaction signature key:",signature)
+   console.log("mint key:",mint.toBase58())
 })();

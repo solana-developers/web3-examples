@@ -1,4 +1,4 @@
-## Token example with Reallocating existing account to enable required memo transfers
+## Reallocate space example for Token 2022
 
-Create a Token 2022 example for (Reallocating space in account).
+Create a Token 2022 example for (Reallocate space example).
 `yarn main` or `npm run main`

@@ -60,13 +60,13 @@ import {
     );
 
     const signature = await sendAndConfirmTransaction(connection, transaction, [payer, owner, destinationKeypair], undefined);
-    console.log(`transaction signature Key:`, signature);
+    console.log("transaction signature key:", signature);
 
     //Enabling required memo transfers
     const enableRequiredMemoSignature = await enableRequiredMemoTransfers(connection, payer, destination, owner, [], undefined, TOKEN_2022_PROGRAM_ID);
-    console.log(`enableRequiredMemoSignature Key:`, enableRequiredMemoSignature);
+    console.log("enableRequiredMemoSignature key:", enableRequiredMemoSignature);
     //disabling required memo transfers
     const disableRequiredMemoSignature = await disableRequiredMemoTransfers(connection, payer, destination, owner, [], undefined, TOKEN_2022_PROGRAM_ID);
-    console.log(`disableRequiredMemoSignature Key:`, disableRequiredMemoSignature)
+    console.log("disableRequiredMemoSignature key:", disableRequiredMemoSignature)
 
 })();

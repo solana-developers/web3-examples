@@ -28,7 +28,7 @@ import {
     const mintKeypair = Keypair.generate();
     const mint = mintKeypair.publicKey;
 
-    // for one time issuing token use this then frezze this or burn this
+    //one time issuing token for use, frezze and burn
     const mintLen = getMintLen([ExtensionType.NonTransferable]);
 
     const lamports = await connection.getMinimumBalanceForRentExemption(mintLen);
@@ -44,6 +44,7 @@ import {
         createInitializeNonTransferableMintInstruction(mint, TOKEN_2022_PROGRAM_ID),
         createInitializeMintInstruction(mint, decimals, mintAuthority.publicKey, null, TOKEN_2022_PROGRAM_ID)
     );
-    let signature = await sendAndConfirmTransaction(connection, transaction, [payer, mintKeypair], undefined);
-    console.log('signature', signature)
+    const signature = await sendAndConfirmTransaction(connection, transaction, [payer, mintKeypair], undefined);
+    console.log("transaction signature key:", signature)
+    console.log("mint key:",mint.toBase58())
 })();
