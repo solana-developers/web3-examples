@@ -10,3 +10,15 @@ Take a look at this awesome collection of examples in Typescript using Solana's
 `web3.js` (and Anchor); for your cloning & running pleasure.
 
 ### :large_blue_diamond: TypeScript. :large_orange_diamond: JavaScript. :cyclone: Web3.
+
+## Examples We'd Love to See!
+
+💡 You can write any example using Solana's `web3.js`, `anchor`, `solanapy`, or `anchorpy`.   
+   
+
+* Examples needed for `anchor`, `solanapy`, or `anchorpy`:
+    * All existing examples
+* New examples needed for all:
+    * Compressed NFTs
+    * Wrapped Tokens
+    * OpenBook
