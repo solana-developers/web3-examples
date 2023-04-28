@@ -13,7 +13,7 @@ Take a look at this awesome collection of examples in Typescript using Solana's
 
 ## Examples We'd Love to See!
 
-💡 You can write any example using Solana's `web3.js`, `anchor`, `solanapy`, or `anchorpy`.   
+💡 You can write any example using Solana's `web3.js`, `anchor`, `solanapy`, `anchorpy`, or `solana_sdk`.   
    
 
 * All existing examples (or new ones) for:
