@@ -16,8 +16,11 @@ Take a look at this awesome collection of examples in Typescript using Solana's
 💡 You can write any example using Solana's `web3.js`, `anchor`, `solanapy`, or `anchorpy`.   
    
 
-* Examples needed for `anchor`, `solanapy`, or `anchorpy`:
-    * All existing examples
+* All existing examples (or new ones) for:
+    * `anchor`: TypeScript
+    * `solanapy`: Python
+    * `anchorpy`: Python
+    * `solana_sdk`: Rust
 * New examples needed for all:
     * Compressed NFTs
     * Wrapped Tokens
