@@ -17,7 +17,7 @@ Take a look at this awesome collection of examples in Typescript using Solana's
    
 
 * All existing examples (or new ones) for:
-    * `anchor`: TypeScript
+    * `web3.js`: TypeScript
     * `solanapy`: Python
     * `anchorpy`: Python
     * `solana_sdk`: Rust
