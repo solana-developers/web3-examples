@@ -2,11 +2,16 @@ import { NATIVE_MINT, createAssociatedTokenAccountInstruction, getAssociatedToke
 import { clusterApiUrl, Connection, Keypair, LAMPORTS_PER_SOL, SystemProgram, Transaction, sendAndConfirmTransaction } from "@solana/web3.js";
 
 (async () => {
+
+  // setting up devnet connection
+
   const connection = new Connection(
     clusterApiUrl('devnet'),
-    'confirmed' 
+    'confirmed'
   )
   const wallet = Keypair.generate();
+
+  // airdropping sol to wallet
 
   const airdropSignature = await connection.requestAirdrop(
     wallet.publicKey,
@@ -15,12 +20,15 @@ import { clusterApiUrl, Connection, Keypair, LAMPORTS_PER_SOL, SystemProgram, Tr
 
   await connection.confirmTransaction(airdropSignature);
 
+  // getting associatedTokenAccount address with native mint
+
   const associatedTokenAccount = await getAssociatedTokenAddress(
     NATIVE_MINT,
     wallet.publicKey
   )
 
-  // Create token account to hold your wrapped SOL
+  // Create associated token account to hold your wrapped SOL
+
   const ataTransaction = new Transaction()
     .add(
       createAssociatedTokenAccountInstruction(
@@ -34,6 +42,7 @@ import { clusterApiUrl, Connection, Keypair, LAMPORTS_PER_SOL, SystemProgram, Tr
   await sendAndConfirmTransaction(connection, ataTransaction, [wallet]);
 
   // Transfer SOL to associated token account and use SyncNative to update wrapped SOL balance
+
   const solTransferTransaction = new Transaction()
     .add(
       SystemProgram.transfer({
@@ -46,8 +55,10 @@ import { clusterApiUrl, Connection, Keypair, LAMPORTS_PER_SOL, SystemProgram, Tr
       )
     )
 
+  // transaction for sending sol
   const tx = await sendAndConfirmTransaction(connection, solTransferTransaction, [wallet]);
   console.log(`tx signature: ${tx}`)
+  // getting account information
   const accountInfo = await getAccount(connection, associatedTokenAccount);
   console.log(`Native: ${accountInfo.isNative}, Lamports: ${accountInfo.amount}`);
   const walletBalance = await connection.getBalance(wallet.publicKey);
