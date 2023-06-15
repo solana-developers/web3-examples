@@ -22,6 +22,5 @@ Take a look at this awesome collection of examples in Typescript using Solana's
     * `anchorpy`: Python
     * `solana_sdk`: Rust
 * New examples needed for all:
-    * Compressed NFTs
     * Wrapped Tokens
     * OpenBook
