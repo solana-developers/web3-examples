@@ -1,0 +1,64 @@
+site_name: AnchorPy
+theme:
+  name: material
+  icon:
+    logo: material/anchor
+  favicon: img/anchor.svg
+  features:
+    - navigation.tabs
+    - navigation.top
+  palette:
+    - scheme: default
+      primary: lime
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  custom_dir: overrides
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.snippets
+  - meta
+  - pymdownx.tabbed:
+      alternate_style: true
+repo_url: https://github.com/kevinheavey/anchorpy
+repo_name: kevinheavey/anchorpy
+site_url: https://kevinheavey.github.io/anchorpy/
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          selection:
+            filters:
+              - "!^_"  # exlude all members starting with _
+              - "^__init__$"  # but always include __init__ modules and methods
+          rendering:
+            show_root_heading: true
+            show_root_full_path: false
+  - search
+nav:
+  - index.md
+  - Client Generator:
+      - clientgen/index.md
+  - Dynamic Client:
+      - dynamic_client/index.md
+      - dynamic_client/comparison_with_anchor_ts.md
+      - dynamic_client/examples.md
+      - dynamic_client/api_reference.md
+  - Testing:
+      - testing/index.md
+  - CLI Reference:
+      - cli/index.md
+extra_css:
+  - css/mkdocstrings.css
+  - css/termynal.css
+  - css/custom.css
+extra_javascript:
+  - 'https://unpkg.com/mermaid@8.4.6/dist/mermaid.min.js'
+  - 'js/termynal.js'
+  - 'js/custom.js'
